@@ -11,7 +11,7 @@ string Function_Nomber_1()
 
 void Function_Nomber_2(const vector<string> &lines)
 {
-    cout << "Содержимое вектора строк:" << endl;
+    cout << "РЎРѕРґРµСЂР¶РёРјРѕРµ РІРµРєС‚РѕСЂР° СЃС‚СЂРѕРє:" << endl;
     for (size_t i = 0; i < lines.size(); i++) {
         cout << "| " << i + 1 << " | " << lines[i] << " |" << endl;
     }
@@ -19,23 +19,23 @@ void Function_Nomber_2(const vector<string> &lines)
 
 }
 
-void Function_Nomber_3(const vector<string> &lines, const string &filename)//(Вектор, Имя фаила в который надо записать)
+void Function_Nomber_3(const vector<string> &lines, const string &filename)//(Р’РµРєС‚РѕСЂ, РРјСЏ С„Р°РёР»Р° РІ РєРѕС‚РѕСЂС‹Р№ РЅР°РґРѕ Р·Р°РїРёСЃР°С‚СЊ)
 {
-    // Открываем файл на запись
+    // РћС‚РєСЂС‹РІР°РµРј С„Р°Р№Р» РЅР° Р·Р°РїРёСЃСЊ
     ofstream outFile(filename);
 
-    // Проверяем, открылся ли файл успешно
+    // РџСЂРѕРІРµСЂСЏРµРј, РѕС‚РєСЂС‹Р»СЃСЏ Р»Рё С„Р°Р№Р» СѓСЃРїРµС€РЅРѕ
     if (!outFile.is_open()) {
-        cout << "Ошибка при открытии файла: " << filename << endl;
+        cout << "РћС€РёР±РєР° РїСЂРё РѕС‚РєСЂС‹С‚РёРё С„Р°Р№Р»Р°: " << filename << endl;
         return;
     }
 
-    // Записываем каждую строку вектора в файл
+    // Р—Р°РїРёСЃС‹РІР°РµРј РєР°Р¶РґСѓСЋ СЃС‚СЂРѕРєСѓ РІРµРєС‚РѕСЂР° РІ С„Р°Р№Р»
     for (const string& line : lines) {
         outFile << line << endl;
     }
     outFile.close();
-    cout << "Содержимое записано в файл " << filename << endl;
+    cout << "РЎРѕРґРµСЂР¶РёРјРѕРµ Р·Р°РїРёСЃР°РЅРѕ РІ С„Р°Р№Р» " << filename << endl;
 }
 
 }
