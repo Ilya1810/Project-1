@@ -1,23 +1,23 @@
 #include <iostream>
 #include <vector>
-#include <sstream>
 #include <fstream>
+#include <sstream>
+#include "Read_file.h"
 using namespace std;
 
-string Function_Nomber_1()
-{
-    return 0;
-}
 
 void Function_Nomber_2(const vector<string> &lines)
 {
+
     cout << "Содержимое вектора строк:" << endl;
+
     for (size_t i = 0; i < lines.size(); i++) {
         cout << "| " << i + 1 << " | " << lines[i] << " |" << endl;
     }
     cout << endl;
 
 }
+
 
 void Function_Nomber_3(const vector<string> &lines, const string &filename)//(Вектор, Имя фаила в который надо записать)
 {
@@ -35,7 +35,9 @@ void Function_Nomber_3(const vector<string> &lines, const string &filename)//(В
         outFile << line << endl;
     }
     outFile.close();
+
     cout << "Содержимое записано в файл " << filename << endl;
+
 }
 
 }
