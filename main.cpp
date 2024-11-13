@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include <sstream>
+#include "Read_file.h"
+
 using namespace std;
 
-string Function_Nomber_1()
-{
-    return 0;
-}
 
 void Function_Nomber_2()
 {
