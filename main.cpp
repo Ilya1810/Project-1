@@ -3,13 +3,14 @@
 #include <fstream>
 #include <sstream>
 #include "Read_file.h"
+
 using namespace std;
 
 
-void Function_Nomber_2(const vector<string> &lines)
+void Function_Number_2(const vector<string> &lines)
 {
 
-    cout << "Содержимое вектора строк:" << endl;
+    wcout << L"Содержимое вектора строк:" << endl;
 
     for (size_t i = 0; i < lines.size(); i++) {
         cout << "| " << i + 1 << " | " << lines[i] << " |" << endl;
@@ -19,14 +20,15 @@ void Function_Nomber_2(const vector<string> &lines)
 }
 
 
-void Function_Nomber_3(const vector<string> &lines, const string &filename)//(Вектор, Имя фаила в который надо записать)
+void Function_Number_3(const vector<string> &lines, const string &filename)//(Вектор, Имя фаила в который надо записать)
 {
     // Открываем файл на запись
     ofstream outFile(filename);
 
     // Проверяем, открылся ли файл успешно
     if (!outFile.is_open()) {
-        cout << "Ошибка при открытии файла: " << filename << endl;
+        wcout << L"Ошибка при открытии файла: ";
+        cout << filename << endl;
         return;
     }
 
@@ -36,15 +38,16 @@ void Function_Nomber_3(const vector<string> &lines, const string &filename)//(В
     }
     outFile.close();
 
-    cout << "Содержимое записано в файл " << filename << endl;
+    wcout << L"Содержимое записано в файл ";
+    cout << filename << endl;
 
 }
 
-}
 int main()
 {
-    Function_Nomber_1();
-    Function_Nomber_2(lines);
-    Function_Nomber_3(lines,"lines.txt");
+    setlocale (LC_ALL,"Russian");
+    vector<string> lines = Function_Number_1();
+    Function_Number_2(lines);
+    Function_Number_3(lines,"lines.txt");
     return 0;
 }

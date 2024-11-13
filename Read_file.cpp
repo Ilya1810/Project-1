@@ -3,8 +3,10 @@
 #include <fstream>
 #include <sstream>
 
+using namespace std;
+
 //Функция, считывающая данные из файла в вектор строк
-vector<string> Function_Nomber_1()
+vector<string> Function_Number_1()
 {
     vector<string> result_string;
 
