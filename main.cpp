@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//Функция, считывающая данные из файла в вектор строк
 vector<string> Function_Nomber_1()
 {
     vector<string> result_string;
@@ -17,18 +18,11 @@ vector<string> Function_Nomber_1()
         exit;
     }
 
-    int k = 0;
     string temporary;
     while (!in.eof())
     {
         in >> temporary;
         result_string.push_back(temporary);
-        k += 1;
-    }
-
-    for (int i=0; i<(k); i++)
-    {
-        cout << result_string[i] << endl;
     }
 
     return result_string;
