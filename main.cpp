@@ -59,5 +59,7 @@ int main()
     vector<string> lines = Function_Number_1();
     Function_Number_2(lines);
     Function_Number_3(lines,"lines.txt");
+    Function_Number_4 ();
+    Function_Number_5 ();
     return 0;
 }
