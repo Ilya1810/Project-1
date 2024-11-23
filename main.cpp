@@ -43,11 +43,23 @@ void Function_Number_3(const vector<string> &lines, const string &filename)//(В
 
 }
 
+void Function_Number_4 ()
+{
+
+}
+
+void Function_Number_5 ()
+{
+
+}
+
 int main()
 {
     setlocale (LC_ALL,"Russian");
     vector<string> lines = Function_Number_1();
     Function_Number_2(lines);
     Function_Number_3(lines,"lines.txt");
+    Function_Number_4 ();
+    Function_Number_5 ();
     return 0;
 }
