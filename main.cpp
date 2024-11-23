@@ -45,6 +45,7 @@ void Function_Number_3(const vector<string> &lines, const string &filename)//(В
 
 }
 
+
 void Function_Number_4 ( vector<string> &elements)//(Функция записывает перед строкой её длинну)
 {
     wcout<<endl<<L"Длинна строки:"<<endl;
@@ -78,6 +79,7 @@ void Function_Number_5 ( vector<string> &exper, const string &filename)//(Фун
 
     wcout << L"Содержимое записано в файл ";
     cout << filename << endl;
+
 }
 
 int main()
@@ -90,6 +92,7 @@ int main()
     Function_Number_3(lines,"lines.txt");
     Function_Number_4(elements);
     Function_Number_5(exper,"lines2.txt");
+
 
     return 0;
 }
